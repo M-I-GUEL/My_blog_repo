@@ -1,0 +1,45 @@
+form{
+    background-color: gray;
+    text-align: center;
+    border-radius: 10px;
+
+}
+.label{
+    color: white;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+textarea{
+    border-radius: 5px;
+    height: 600px;
+    width: 600px;
+    resize: none;
+    border-color: gray;
+}
+.bost{
+    background-color: rgb(6, 173, 118);
+    border-radius: 5px;
+    border-color: gray;
+    height: 30px;
+    width: 100px;
+    cursor: pointer;
+}
+#title{
+    width: 500px;
+    border-radius: 4px;
+}
+.success{
+    background-color: #07aa2a;
+    border-radius: 4px;
+    border-color: black;
+    width: 500px;
+    padding: 25px;
+    text-align: center;
+    display: block;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    margin: 0 auto;
+    
+}

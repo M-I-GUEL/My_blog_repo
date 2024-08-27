@@ -1,0 +1,24 @@
+{% extends "test.html" %}
+
+{% block content%}
+{%load static%}
+
+<link rel='stylesheet' href="{% static 'css/create.css'%}">
+<form method='POST'>
+
+{% csrf_token %}
+{%if success %}
+<div class='success'>
+{{success}}
+</div>
+{% endif %}
+<label class='label' for='title'>Title:</label><br><br>
+<input type='text' id='title' name='title' required><br><br>
+<label class='label' for='content'>Content:</label><br><br>
+<textarea type='text' id='content' name='content' required></textarea><br><br>
+<button type='submit' class='bost'>Create post</button>
+</form>
+
+
+
+{% endblock %}
