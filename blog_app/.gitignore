@@ -1,0 +1,6 @@
+*.sqlite3
+__pycache__
+.env
+/media/
+requirements.txt
+secret_keys.py
