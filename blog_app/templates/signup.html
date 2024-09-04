@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title%}
+Signup page
+{% endblock  %}
+
+{% block content %}
+{% load static%}
+<link rel='stylesheet' type='text/css' href="{% static 'css/practice.css' %}">
+<div>
+<h2>Sign Up</h2>
+<form method='post'>
+{% csrf_token %}
+{% if form.errors %}
+<div>
+   <ul>
+         {%for field, errors in form.errors.items%}
+         {% for error in errors%}
+            <li>
+                {{error}}
+            </li>
+         {%endfor %}
+         {%endfor %}
+   </ul>
+</div>
+{%endif%}
+<div>
+{{form.non_field_errors}}
+{{form.first_name.label_tag}}
+{{form.first_name}}
+</div>
+<div>
+{{form.last_name.label_tag}}
+{{form.last_name}}
+</div>
+<div>
+{{form.email.label_tag}}
+{{form.email}}
+</div>
+<div>
+{{form.username.label_tag}}
+{{form.username}}
+</div>
+<div>
+{{form.password1.label_tag}}
+{{form.password1}}
+</div>
+<div>
+{{form.password2.label_tag}}
+{{form.password2}}
+</div>
+<button type='submit'>Sign Up</button>
+</form>
+
+</div>
+<p>Already have an account?<a href='{% url "log_in" %}'>Log in</a></p>
+{% endblock  %}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+</html lang='en'>
+<head>
+{%load static%}
+<link rel='stylesheet', href='{% static "css/practice.css" %}'>
+<meta name='viewport' content='width=device-width, initialscale=1.0'>
+</head>
+<body>
+<div class='form-container'>
+<h2 class='header'>Log in</h2>
+<form method='post' class='auth'>
+{% csrf_token %}
+{{form}}
+<button type='submit'>Log in</button>
+</form>
+<p>Don't have an account? <a href='{% url "sign_up"%}'>Create account</a></p>
+</div>
+
+</body>
+</html>

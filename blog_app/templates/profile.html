@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}
+your profile
+{% endblock  %}
+
+{% block content %}
+{%load static%}
+<link rel='stylesheet' href='{% static "css/profile.css" %}'>
+<div profile-info>
+<p><strong> Current Bio: </strong>{{request.user.profile.bio}}</p>
+<p><strong>Current location: </strong>{{request.user.profile.location}}</p>
+<p><strong>Current date of birth: </strong>{{request.user.profile.birth_date}}</p>
+
+</div>
+
+
+
+
+
+<div class='profile-container'>
+<h2>Your Profile</h2>
+{%if user.profile.profile_img %}
+<div class='profile-pic-container'>
+     <img src='{{ user.profile.profile_img.url }}' alt='profile image' >
+</div>
+{%else%}
+<p>No Profile picture uploaded.</p>
+{% endif %}
+<div class='profile-container'>
+<form method='post' enctype='multipart/form-data'>
+{% csrf_token %}
+{{form}}
+
+<button type='submit'>Update Profile</button>
+</form>
+</div>
+</div>
+
+
+<div class='profile-post-container'>
+    <h2>Your posts</h2>
+    {% for post in user_posts %}
+        <div class='post-details'>
+        <ul>
+          <li>
+              <h3><a href='{% url "read_detail" post.id%}'>{{post.title}}</a></h3>
+              <p class='post-date'>Posted on:{{post.date}}</p>
+              <p class='post-content'>{{post.content|truncatewords:20}}</p>
+              
+        </ul>
+          </li>
+        </div>
+     {%empty%}
+        <li>No post created yet...</li>
+     {% endfor %}
+</div>
+{% endblock  %}

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+{%load static %}
+<link rel='stylesheet' href='{% static "css/style.css" %}'>
+<h1>Trending...
+</h1>
+
+
+{% for x in info%}
+<div class='post'>
+<img class='profile-pic' src='{{user.profile.profile_img.url}}' alt='{{user.username}}"s profile picture'>Title:<b>{{x.title}}</b>, Views:<b>{{x.views}}</b>, Date:<b>{{x.date|time:'H:i'}}</b>
+</div>
+
+<p>{{x.content|truncatewords:100}}</p>
+
+<a href="{% url 'read_detail' x.id %}">
+<button class='read'>
+Read more
+</button></a>
+{%endfor%}
+
+
+<div class='uefa'>Title:<b>{{uefa.title}}</b>, Views:<b>{{uefa.views}}</b>, Date:<b>{{uefa.date|time:'H:i'}}</b><br><br>
+
+
+      <div class="story">
+
+            <img src='{% static "img/player.jpg"%}' alt='mbappe image'>
+      </div>
+       
+      <div>
+             <h3>Bellingham shines as Mbappe enjoys dream debut!</h3><br>
+             <p>{{uefa.content|truncatewords:100}}</p>
+      </div>
+</div>
+<a href='{% url "read_detail" uefa.id%}'><button class='read'>Read more</button></a>
+
+<div class='pic'>Title:<b>{{pic.title}}</b>, Views:<b>{{pic.views}}</b>, Date:<b>{{pic.date|time:'H:i'}}</b><br><br>
+
+    <div class='story'>
+    
+      <img src='{% static "img/escape.jpg"%}' alt='escape of the seven image'>
+    </div>
+      <h3>Plot Analysis</h3>
+      {{pic.content|truncatewords:100}}
+</div>
+ <a href='{% url "read_detail" pic.id%}'><button class='read'>Read more</button></a>
+
+{% endblock  %}

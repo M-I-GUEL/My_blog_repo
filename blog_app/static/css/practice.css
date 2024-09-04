@@ -1,0 +1,51 @@
+
+.header{
+    text-align: center;
+    color:#333 ;
+    font-weight: 100px;
+    font-size: 50px;
+    
+}
+
+.auth input[type='text'],
+.auth input[type='email'],
+.auth input[type='password'] {
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     width: 100%;
+     margin: 10px 0;
+     padding: 10px;
+     padding-bottom: 5px;
+     height: 30px;
+
+}
+.form-container{
+    background-color: #fff;
+    border-radius: 5px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 50px;
+    text-align: center;
+    width: 100%;
+
+}
+.auth label{
+    display: none;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.auth button[type='submit']{
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+    border: none;
+    text-align: center;
+}
+.auth button[type='submit'] :hover{
+    background-color: #45a049; 
+}
+
+

@@ -1,0 +1,122 @@
+.profile-container{
+    width: 50%;
+    padding: 20px;
+    margin: 50px auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    
+}
+
+.profile-container h2{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+
+}
+
+.profile-container form{
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-container label{
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #555;
+}
+.profile-container textarea{
+    resize: none;
+}
+
+.profile-container input[type='text'],
+.profile-container input[type='email'],
+.profile-container input[type='password'],
+.profile-container input[type='file']
+.profile-container input[type='date']
+{
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    width: 100%;
+    
+}
+
+.profile-container button[type='submit']{
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    background-color:#007bff;
+    color: white;
+    border: none;
+    font-size: 16px;
+}
+
+.profile-container button[type='submit']:hover{
+    background-color: #45a059;
+
+}
+@media(max-width: 550px){
+.profile-container{
+    padding: 15px;
+}
+}
+
+.profile-pic-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic-container img {
+    width: 150px; /* Set the width to a fixed size */
+    height: 150px; /* Set the height to a fixed size */
+    border-radius: 50%; /* Make the image round */
+    object-fit: cover; /* Ensure the image covers the entire area */
+    border: 3px solid #ddd; /* Add a subtle border */
+}
+.profile-post-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 20px;
+    
+}
+.post-details{
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+
+}
+.post-details:hover{
+    transform: translateY(-5px);
+}
+.post-details h3{
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+}
+.post-details .post-date{
+    color: #777;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.post-details p{
+    line-height: 1.5;
+    font-size: 16px;
+    color: #555;
+}
+.post-details a{
+    color: #007bff;
+    text-decoration: none;
+}
+.post-details a:hover{
+    text-decoration: underline;
+}
+.profile-post-container h2{
+    text-align: center;
+    color: #333;
+}
